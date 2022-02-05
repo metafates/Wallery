@@ -1,25 +1,25 @@
 <template>
-  <v-app>
-    <v-main>
-      <router-view/>
-    </v-main>
-  </v-app>
+    <v-app>
+        <v-main>
+            <Home />
+        </v-main>
+        <v-footer class="pa-16">
+            <v-col
+                class="text-center"
+                cols="12"
+            >
+                By <strong><a class="green--text text-decoration-none" href="https://github.com/metafates"
+                              target="_blank">metafates</a></strong> with
+                <v-icon color="red">mdi-heart</v-icon>
+            </v-col>
+        </v-footer>
+    </v-app>
 </template>
 
 <script>
+import Home from "@/views/Home";
 export default {
-  name: 'App',
-
-  data: () => ({
-    //
-  }),
+    name: 'App',
+    components: {Home},
 };
 </script>
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap');
-
-html {
-    font-family: 'Space Mono', monospace !important;
-}
-</style>

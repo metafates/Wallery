@@ -1,4 +1,4 @@
-import { Octokit } from "octokit";
+import {Octokit} from "octokit";
 
 const octokit = new Octokit({auth: process.env.GITHUB_TOKEN})
 
@@ -14,7 +14,7 @@ export async function getWallpapers() {
 
     const sha = commits.data[0].sha
 
-    const commit =  await octokit.request('GET /repos/:owner/:repo/git/commits/:sha', {
+    const commit = await octokit.request('GET /repos/:owner/:repo/git/commits/:sha', {
         owner,
         repo,
         sha

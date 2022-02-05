@@ -1,26 +1,31 @@
 <template>
-    <v-container fill-height class="d-flex flex-column justify-center align-center">
-        <v-icon color="green" x-large>mdi-panorama-variant-outline</v-icon>
-        <h1 class="my-4" >
-            <HTMLTag
-                tag="h1"
-                class="text-h2"
+    <v-container fill-height class="d-flex flex-column justify-center align-center my-16">
+        <a
+            class="text-decoration-none"
+            href="https://github.com/metafates/Wallpapers/"
+            target="_blank"
+        ><v-icon large color="green">mdi-github</v-icon></a>
+        <h1 class="my-4">
+            <Tag
+                tag=" ~ "
+                no-tag
+                class="text-md-h2 text-h4"
                 color="green"
                 tag-color="green"
-            >Wallery</HTMLTag>
+            >Wallery</Tag>
         </h1>
-        <p class="text-subtitle-1"><a class="green--text darken-4" href="#">GitHub</a></p>
+        <p class="text-subtitle-2 text-md-subtitle-1 text-center text--secondary">
+            Click on image to open it in a full size
+        </p>
+
     </v-container>
 </template>
 
 <script>
-import HTMLTag from "@/components/HTMLTag";
+import Tag from "@/components/Tag";
+
 export default {
-  name: "Title",
-    components: {HTMLTag}
+    name: "Title",
+    components: {Tag}
 }
 </script>
-
-<style scoped>
-
-</style>
