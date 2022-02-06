@@ -10,7 +10,6 @@
             <a v-else :href="w" target="_blank">
                 <v-img
                     :src="w"
-                    lazy-src="skeleton.png"
                 >
                     <template v-slot:placeholder>
                         <v-row
