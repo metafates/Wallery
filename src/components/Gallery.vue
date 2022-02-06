@@ -16,7 +16,7 @@
                             :src="w.max"
                             :lazy-src="w.min"
                         >
-                            <div :class="hover ? 'd-flex' : 'd-none'" class="justify-start align-end" style="height: 100%">
+                            <div :class="hover ? 'd-flex' : 'd-none'" class="justify-center align-end" style="height: 100%">
                                 <span class="white pa-3">
                                     {{w.dimensions}}
                                 </span>
