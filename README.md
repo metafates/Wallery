@@ -6,4 +6,6 @@ Frontend client for my [wallpapers](https://github.com/metafates/Wallpapers)
 ![screenshot](github/screenshot.png)
 
 ## Why?
+
 why not lol
+

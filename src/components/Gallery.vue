@@ -7,7 +7,7 @@
             cols="6"
         >
             <v-skeleton-loader v-if="loading" type="image"></v-skeleton-loader>
-            <a v-else :href="w" target="_blank">
+            <a v-else :href="w.max" target="_blank">
                 <v-img
                     :src="w.max"
                     :lazy-src="w.min"
