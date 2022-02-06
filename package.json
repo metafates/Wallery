@@ -9,10 +9,12 @@
     "deploy": "node scripts/deploy.mjs"
   },
   "dependencies": {
+    "@vue/composition-api": "^1.4.5",
     "core-js": "^3.6.5",
     "execa": "^6.0.0",
     "octokit": "^1.7.1",
     "vue": "^2.6.11",
+    "vue-masonry": "^0.14.0",
     "vuetify": "^2.4.0"
   },
   "devDependencies": {
