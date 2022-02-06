@@ -17,7 +17,9 @@
                             :lazy-src="w.min"
                         >
                             <div :class="hover ? 'd-flex' : 'd-none'" class="justify-start align-end" style="height: 100%">
-                                <span class="white pa-3">{{w.dimensions}}</span>
+                                <span class="white pa-3">
+                                    {{w.dimensions}}
+                                </span>
                             </div>
                             <template v-slot:placeholder>
                                 <v-row
@@ -61,12 +63,11 @@ export default {
 </script>
 
 <style>
-
 .smooth {
     transition: .2s;
 }
 
 .scale {
-    transform: scale(1.02);
+    transform: scale(1.015);
 }
 </style>

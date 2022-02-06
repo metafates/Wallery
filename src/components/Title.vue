@@ -1,10 +1,17 @@
 <template>
     <div class="d-flex flex-column justify-center align-center my-16">
-        <a
-            class="text-decoration-none"
-            href="https://github.com/metafates/Wallpapers/"
-            target="_blank"
-        ><v-icon large color="deep-purple ">mdi-github</v-icon></a>
+        <v-tooltip top>
+            <template v-slot:activator="{ on, attrs }">
+                <a
+                    v-bind="attrs"
+                    v-on="on"
+                    class="text-decoration-none"
+                    href="https://github.com/metafates/Wallpapers/"
+                    target="_blank"
+                ><v-icon large color="deep-purple ">mdi-github</v-icon></a>
+            </template>
+            <span>Github Repo</span>
+        </v-tooltip>
         <h1 class="my-4">
             <Tag
                 tag=" ~ "
