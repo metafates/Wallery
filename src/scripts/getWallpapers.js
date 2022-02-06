@@ -37,8 +37,10 @@ export async function getWallpapers() {
         sha: wallpapersFolderSha
     })
 
+
     return wallpapersTree.data.tree.map(w => ({
         max: `https://raw.githubusercontent.com/${owner}/${repo}/main/${wallpapersFolder}/${w.path}`,
-        min: `https://raw.githubusercontent.com/${owner}/${repo}/main/${compressedWallpapersFolder}/${w.path}`
+        min: `https://raw.githubusercontent.com/${owner}/${repo}/main/${compressedWallpapersFolder}/${w.path}`,
+        dimensions: w.path.match(/.*@(\d+?x\d+?)\./).at(-1)
     }))
 }
