@@ -5,6 +5,7 @@ const octokit = new Octokit({auth: process.env.GITHUB_TOKEN})
 const owner = 'metafates'
 const repo = 'Wallpapers'
 const wallpapersFolder = 'wallpapers'
+const compressedWallpapersFolder = 'compressed'
 
 export async function getWallpapers() {
     const commits = await octokit.request('GET /repos/:owner/:repo/commits', {
@@ -36,7 +37,8 @@ export async function getWallpapers() {
         sha: wallpapersFolderSha
     })
 
-    return wallpapersTree.data.tree.map(w => (
-        `https://raw.githubusercontent.com/${owner}/${repo}/main/${wallpapersFolder}/${w.path}`
-    ))
+    return wallpapersTree.data.tree.map(w => ({
+        max: `https://raw.githubusercontent.com/${owner}/${repo}/main/${wallpapersFolder}/${w.path}`,
+        min: `https://raw.githubusercontent.com/${owner}/${repo}/main/${compressedWallpapersFolder}/${w.path}`
+    }))
 }

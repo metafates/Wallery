@@ -9,7 +9,8 @@
             <v-skeleton-loader v-if="loading" type="image"></v-skeleton-loader>
             <a v-else :href="w" target="_blank">
                 <v-img
-                    :src="w"
+                    :src="w.max"
+                    :lazy-src="w.min"
                 >
                     <template v-slot:placeholder>
                         <v-row
