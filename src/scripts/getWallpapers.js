@@ -48,8 +48,9 @@ export async function getWallpapers() {
     shuffle(wallpapersTree.data.tree)
 
     return wallpapersTree.data.tree.map(w => ({
-        max: `https://raw.githubusercontent.com/${owner}/${repo}/main/${wallpapersFolder}/${w.path}`,
-        min: `https://raw.githubusercontent.com/${owner}/${repo}/main/${compressedWallpapersFolder}/${w.path}`,
-        dimensions: w.path.match(/.*@(\d+?x\d+?)\./).at(-1)
+        max: `https://raw.githubusercontent.com/${owner}/${repo}/main/${wallpapersFolder}/${encodeURIComponent(w.path)}`,
+        min: `https://raw.githubusercontent.com/${owner}/${repo}/main/${compressedWallpapersFolder}/${encodeURIComponent(w.path)}`,
+        dimensions: w.path.match(/.*@(\d+?x\d+?)\./).at(-1),
+        color: w.path.match(/@(#[A-Za-z\d]+?)@/).at(-1)
     }))
 }
