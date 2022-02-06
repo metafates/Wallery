@@ -1,8 +1,8 @@
 <template>
     <span>
-        <span :class="color + '--text'">{{ tag }}</span>
+        <span class="deep-purple--text">{{ tag }}</span>
         <slot></slot>
-        <span :class="color + '--text'">{{ tag }}</span>
+        <span class="deep-purple--text">{{ tag }}</span>
     </span>
 </template>
 
@@ -10,7 +10,6 @@
 export default {
     name: "Tag",
     props: {
-        color: String,
         tag: String,
     },
 }
