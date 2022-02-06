@@ -20,7 +20,7 @@
                         target="_blank"
                     >
                         <v-img
-                            :src="w.max"
+                            :src="w.med"
                             :lazy-src="w.min"
                             @load="$redrawVueMasonry('gallery')"
                         >

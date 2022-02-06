@@ -6,6 +6,7 @@ const owner = 'metafates'
 const repo = 'Wallpapers'
 const wallpapersFolder = 'wallpapers'
 const compressedWallpapersFolder = 'compressed'
+const mediumWallpapersFolder = 'medium'
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -50,6 +51,7 @@ export async function getWallpapers() {
     return wallpapersTree.data.tree.map(w => ({
         max: `https://raw.githubusercontent.com/${owner}/${repo}/main/${wallpapersFolder}/${encodeURIComponent(w.path)}`,
         min: `https://raw.githubusercontent.com/${owner}/${repo}/main/${compressedWallpapersFolder}/${encodeURIComponent(w.path)}`,
+        med: `https://raw.githubusercontent.com/${owner}/${repo}/main/${mediumWallpapersFolder}/${encodeURIComponent(w.path)}`,
         dimensions: w.path.match(/.*@(\d+?x\d+?)\./).at(-1),
         color: w.path.match(/@(#[A-Za-z\d]+?)@/).at(-1)
     }))
