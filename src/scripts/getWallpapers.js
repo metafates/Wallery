@@ -7,6 +7,13 @@ const repo = 'Wallpapers'
 const wallpapersFolder = 'wallpapers'
 const compressedWallpapersFolder = 'compressed'
 
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 export async function getWallpapers() {
     const commits = await octokit.request('GET /repos/:owner/:repo/commits', {
         owner,
@@ -37,6 +44,8 @@ export async function getWallpapers() {
         sha: wallpapersFolderSha
     })
 
+    // Randomly shuffle wallpapers (because why not?)
+    shuffle(wallpapersTree.data.tree)
 
     return wallpapersTree.data.tree.map(w => ({
         max: `https://raw.githubusercontent.com/${owner}/${repo}/main/${wallpapersFolder}/${w.path}`,

@@ -5,7 +5,7 @@
             <v-col
                 v-for="w in wallpapers"
                 :key="w.max"
-                md="4"
+                sm="4"
                 cols="6"
             >
                 <v-hover v-slot="{hover}">
