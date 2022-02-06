@@ -6,14 +6,20 @@
         <v-main>
             <Gallery/>
         </v-main>
-        <v-footer class="pa-16">
+        <v-footer color="transparent" class="pa-16">
             <v-col
                 class="text-center"
                 cols="12"
             >
-                By <strong><a class="deep-purple--text text-decoration-none" href="https://github.com/metafates"
-                              target="_blank">metafates</a></strong> with
-                <v-icon color="red">mdi-heart</v-icon>
+                <span class="text-h6">
+                    By
+                    <strong>
+                        <a class="deep-purple--text text-decoration-none" href="https://github.com/metafates"
+                                  target="_blank">metafates</a>
+                    </strong>
+                    with
+                    <v-icon color="red">mdi-heart</v-icon>
+                </span>
             </v-col>
         </v-footer>
     </v-app>
