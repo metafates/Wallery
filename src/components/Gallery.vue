@@ -22,7 +22,7 @@
                         <v-img
                             :src="w.med"
                             :lazy-src="w.min"
-                            @load="$redrawVueMasonry('gallery')"
+                            @load="onImageLoad"
                         >
                             <v-expand-transition>
                                 <div
@@ -64,10 +64,22 @@ export default {
         return {
             wallpapers: 30,
             loading: true,
+            loadingTimeoutStarted: false,
             containerId: 'gallery'
         }
     },
     methods: {
+        onImageLoad() {
+            this.$redrawVueMasonry('gallery')
+            if (!this.loadingTimeoutStarted) {
+                this.loadingTimeoutStarted = true
+
+                // Wait until masonry render
+                setTimeout(() => {
+                    this.loading = false
+                }, 3000)
+            }
+        },
         invertColor(hex, bw) {
             function padZero(str, len) {
                 len = len || 2;
@@ -104,9 +116,6 @@ export default {
     },
     async mounted() {
         this.wallpapers = await getWallpapers()
-        setTimeout(() => {
-            this.loading = false
-        }, 2000)
     }
 }
 </script>
