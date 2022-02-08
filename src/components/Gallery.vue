@@ -9,6 +9,7 @@
                 v-for="(w, i) in wallpapers"
                 :key="i"
                 sm="4"
+                md="3"
                 cols="6"
                 class="wallpaper"
             >
