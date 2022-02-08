@@ -1,5 +1,5 @@
 <template>
-    <v-container fill-height class="justify-center">
+    <v-container fill-height class="justify-center" :class="{'overflow-hidden': loading}">
         <v-overlay v-if="loading" color="white" opacity="1">
             <Loader />
         </v-overlay>
