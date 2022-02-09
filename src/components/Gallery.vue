@@ -1,6 +1,6 @@
 <template>
     <v-container fill-height class="justify-center" :class="{'overflow-hidden': loading}">
-        <v-overlay v-if="loading" color="background" opacity="1">
+        <v-overlay :value="loading" color="background" opacity="1">
             <Loader />
         </v-overlay>
         <v-row v-masonry="'gallery'" transition-duration="0.3s" item-selector=".wallpaper">
