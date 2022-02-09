@@ -1,25 +1,25 @@
 <template>
     <v-app>
-        <header>
+        <header class="background">
             <Title />
         </header>
-        <v-main>
+        <v-main class="background">
             <Gallery/>
         </v-main>
-        <v-footer color="transparent" class="pa-16">
+        <v-footer color="background" class="pa-16">
             <v-col
                 class="text-center"
                 cols="12"
             >
-                <span class="text-h6">
+                <p class="text-body-1">
                     By
                     <strong>
-                        <a class="accent--text text-decoration-none" href="https://github.com/metafates"
+                        <a class="accent--text text-decoration-none font-weight-bold" href="https://github.com/metafates"
                                   target="_blank">metafates</a>
                     </strong>
                     with
                     <v-icon color="red">mdi-heart</v-icon>
-                </span>
+                </p>
             </v-col>
         </v-footer>
     </v-app>

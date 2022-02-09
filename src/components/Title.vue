@@ -5,12 +5,12 @@
                 <a
                     v-bind="attrs"
                     v-on="on"
-                    class="text-decoration-none"
-                    href="https://github.com/metafates/Wallpapers/"
+                    class="text-decoration-none accent--text text-h2"
+                    href="https://www.metafates.one"
                     target="_blank"
-                ><v-icon large color="accent">mdi-github</v-icon></a>
+                >@</a>
             </template>
-            <span>Github Repo</span>
+            <span>metafates</span>
         </v-tooltip>
         <h1 class="my-4 text-h3 text-md-h2">
             Wallery
