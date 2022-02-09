@@ -8,7 +8,7 @@
                     class="text-decoration-none"
                     href="https://github.com/metafates/Wallpapers/"
                     target="_blank"
-                ><v-icon large color="deep-purple ">mdi-github</v-icon></a>
+                ><v-icon large color="accent">mdi-github</v-icon></a>
             </template>
             <span>Github Repo</span>
         </v-tooltip>

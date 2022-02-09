@@ -14,7 +14,7 @@
                 <span class="text-h6">
                     By
                     <strong>
-                        <a class="deep-purple--text text-decoration-none" href="https://github.com/metafates"
+                        <a class="accent--text text-decoration-none" href="https://github.com/metafates"
                                   target="_blank">metafates</a>
                     </strong>
                     with
@@ -32,5 +32,20 @@ import Gallery from "@/components/Gallery";
 export default {
     name: 'App',
     components: {Gallery, Title},
+    mounted() {
+        // Adapt for system theme
+        if (
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches
+        ) {
+            this.$vuetify.theme.dark = true
+        }
+        // Watch for system theme change
+        window
+            .matchMedia('(prefers-color-scheme: dark)')
+            .addEventListener('change', (e) => {
+                this.$vuetify.theme.dark = e.matches
+            })
+    },
 };
 </script>

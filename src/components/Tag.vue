@@ -1,8 +1,8 @@
 <template>
     <span>
-        <span class="deep-purple--text">{{ tag }}</span>
+        <span class="accent--text">{{ tag }}</span>
         <slot></slot>
-        <span class="deep-purple--text">{{ tag }}</span>
+        <span class="accent--text">{{ tag }}</span>
     </span>
 </template>
 

@@ -1,21 +1,6 @@
 <template>
     <div class="loading">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div v-for="i in 16" :key="i" class="accent"></div>
     </div>
 </template>
 
@@ -34,7 +19,6 @@ export default {
 .loading div {
     width: 6px;
     height: 6px;
-    background: #673ab7;
     border-radius: 100%;
     float: left;
     margin-bottom: 12px;
