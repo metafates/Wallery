@@ -12,11 +12,8 @@
             </template>
             <span>Github Repo</span>
         </v-tooltip>
-        <h1 class="my-4">
-            <Tag
-                tag=" ~ "
-                class="text-md-h2 text-h4"
-            >Wallery</Tag>
+        <h1 class="my-4 text-h3 text-md-h2">
+            Wallery
         </h1>
         <p class="text-subtitle-2 text-md-subtitle-1 text-center text--secondary">
             Click on image to open it in a full size
@@ -26,10 +23,7 @@
 </template>
 
 <script>
-import Tag from "@/components/Tag";
-
 export default {
     name: "Title",
-    components: {Tag}
 }
 </script>
