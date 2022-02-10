@@ -1,25 +1,15 @@
 <template>
     <div class="d-flex flex-column justify-center align-center my-16">
-        <div class="theme-switch">
-            <v-icon color="accent" large @click="changeTheme">mdi-theme-light-dark</v-icon>
-        </div>
-<!--        <v-tooltip top>-->
-<!--            <template v-slot:activator="{ on, attrs }">-->
-<!--                <a-->
-<!--                    v-bind="attrs"-->
-<!--                    v-on="on"-->
-<!--                    class="text-decoration-none accent&#45;&#45;text text-h2 no-select scale"-->
-<!--                    href="https://www.metafates.one"-->
-<!--                    target="_blank"-->
-<!--                >@</a>-->
-<!--            </template>-->
-<!--            <span>metafates</span>-->
-<!--        </v-tooltip>-->
+        <v-btn icon x-large @click="changeTheme" class="theme-switch">
+            <v-icon
+                color="accent"
+            >{{themeSwitchIcon}}</v-icon>
+        </v-btn>
         <h1 class="my-4 text-h3 text-md-h2">
             W<a
             v-bind="attrs"
             v-on="on"
-            class="text-decoration-none accent--text text-h2 no-select scale"
+            class="text-decoration-none accent--text text-h2 no-select"
             href="https://www.metafates.one"
             target="_blank"
         >@</a>llery
@@ -37,7 +27,12 @@ export default {
         changeTheme() {
             this.$vuetify.theme.dark = !this.$vuetify.theme.dark
         }
-    }
+    },
+    computed: {
+        themeSwitchIcon() {
+            return this.$vuetify.theme.dark ? 'mdi-lightbulb-off-outline' : 'mdi-lightbulb-on'
+        }
+    },
 }
 </script>
 
@@ -50,13 +45,5 @@ export default {
 
 .no-select {
     user-select: none;
-}
-
-.scale {
-    transition: 0.3s;
-}
-
-.scale:hover {
-    transform: scale(1.3);
 }
 </style>
