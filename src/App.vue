@@ -1,9 +1,7 @@
 <template>
     <v-app>
-        <header class="background">
-            <Title />
-        </header>
         <v-main class="background">
+            <Title />
             <Gallery/>
         </v-main>
         <v-footer color="background" class="pa-16">
