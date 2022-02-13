@@ -10,6 +10,7 @@
                 :key="i"
                 sm="4"
                 md="3"
+                xl="2"
                 cols="6"
                 class="wallpaper"
             >
