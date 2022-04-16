@@ -52,7 +52,7 @@ export async function getWallpapers() {
         max: `https://raw.githubusercontent.com/${owner}/${repo}/main/${wallpapersFolder}/${encodeURIComponent(w.path)}`,
         min: `https://raw.githubusercontent.com/${owner}/${repo}/main/${compressedWallpapersFolder}/${encodeURIComponent(w.path)}`,
         med: `https://raw.githubusercontent.com/${owner}/${repo}/main/${mediumWallpapersFolder}/${encodeURIComponent(w.path)}`,
-        dimensions: w.path.match(/.*@(\d+?x\d+?)\./).at(-1),
-        color: w.path.match(/@(#[A-Za-z\d]+?)@/).at(-1)
+        dimensions: w?.path?.match(/.*@(\d+?x\d+?)\./)?.at(-1) || '',
+        color: w?.path?.match(/@(#[A-Za-z\d]+?)@/)?.at(-1) || '#ffffff'
     }))
 }
