@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Outfit
+- Font Author: Copyright 2021 The Outfit Project Authors (https://github.com/Outfitio/Outfit-Fonts)
+- Font Source: http://fonts.gstatic.com/s/outfit/v1/QGYyz_MVcBeNP4NjuGObqx1XmO1I4TC1C4G-EiAou6Y.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
